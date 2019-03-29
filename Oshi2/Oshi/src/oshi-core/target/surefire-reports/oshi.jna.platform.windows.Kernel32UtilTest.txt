@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: oshi.jna.platform.windows.Kernel32UtilTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in oshi.jna.platform.windows.Kernel32UtilTest

@@ -1,0 +1,59 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1553888829634
+Bundle-Description: "A JNA-based (native) operating system information
+  library for Java that aims to provide a cross-platform implementatio
+ n to retrieve system information, such as version, memory, CPU, disk,
+  battery, etc."
+Bundle-DocURL: https://github.com/oshi/oshi/oshi-core
+Bundle-License: "MIT License";link="https://opensource.org/licenses/MI
+ T"
+Bundle-ManifestVersion: 2
+Bundle-Name: oshi-core
+Bundle-SCM: url="https://github.com/oshi/oshi.git",connection="scm:git
+ :git@github.com:oshi/oshi.git",developer-connection="scm:git:git@gith
+ ub.com:oshi/oshi.git",tag=HEAD
+Bundle-SymbolicName: com.github.oshi.oshi-core
+Bundle-Vendor: oshi
+Bundle-Version: 4.0.0.SNAPSHOT
+Created-By: 1.8.0_141 (Oracle Corporation)
+Export-Package: oshi;version="4.0.0";uses:="oshi.hardware,oshi.softwar
+ e.os",oshi.data.windows;version="4.0.0";uses:="com.sun.jna.platform.w
+ in32.COM,oshi.util.platform.windows",oshi.hardware;version="4.0.0",os
+ hi.hardware.common;version="4.0.0";uses:="oshi.hardware",oshi.hardwar
+ e.platform.linux;version="4.0.0";uses:="oshi.hardware,oshi.hardware.c
+ ommon",oshi.hardware.platform.mac;version="4.0.0";uses:="oshi.hardwar
+ e,oshi.hardware.common",oshi.hardware.platform.unix.freebsd;version="
+ 4.0.0";uses:="oshi.hardware,oshi.hardware.common",oshi.hardware.platf
+ orm.unix.solaris;version="4.0.0";uses:="oshi.hardware,oshi.hardware.c
+ ommon",oshi.hardware.platform.windows;version="4.0.0";uses:="oshi.dat
+ a.windows,oshi.hardware,oshi.hardware.common",oshi.jna.platform.linux
+ ;version="4.0.0";uses:="com.sun.jna,oshi.jna.platform.unix",oshi.jna.
+ platform.mac;version="4.0.0";uses:="com.sun.jna,com.sun.jna.platform.
+ mac,com.sun.jna.ptr,oshi.jna.platform.unix",oshi.jna.platform.unix;ve
+ rsion="4.0.0";uses:="com.sun.jna,com.sun.jna.ptr",oshi.jna.platform.u
+ nix.freebsd;version="4.0.0";uses:="com.sun.jna,oshi.jna.platform.unix
+ ",oshi.jna.platform.windows;version="4.0.0";uses:="com.sun.jna,com.su
+ n.jna.platform.win32",oshi.software.common;version="4.0.0";uses:="osh
+ i.software.os",oshi.software.os;version="4.0.0",oshi.software.os.linu
+ x;version="4.0.0";uses:="oshi.software.common,oshi.software.os",oshi.
+ software.os.mac;version="4.0.0";uses:="oshi.software.common,oshi.soft
+ ware.os",oshi.software.os.unix.freebsd;version="4.0.0";uses:="oshi.so
+ ftware.common,oshi.software.os",oshi.software.os.unix.solaris;version
+ ="4.0.0";uses:="oshi.software.common,oshi.software.os",oshi.software.
+ os.windows;version="4.0.0";uses:="com.sun.jna.platform.win32,oshi.sof
+ tware.common,oshi.software.os",oshi.util;version="4.0.0",oshi.util.pl
+ atform.linux;version="4.0.0",oshi.util.platform.mac;version="4.0.0";u
+ ses:="com.sun.jna,com.sun.jna.ptr,oshi.jna.platform.mac",oshi.util.pl
+ atform.unix.freebsd;version="4.0.0";uses:="com.sun.jna",oshi.util.pla
+ tform.unix.solaris;version="4.0.0";uses:="com.sun.jna.platform.unix.s
+ olaris",oshi.util.platform.windows;version="4.0.0";uses:="com.sun.jna
+ .platform.win32,com.sun.jna.platform.win32.COM"
+Import-Package: com.sun.management;resolution:=optional,com.sun.jna;ve
+ rsion="[5.2,6)",com.sun.jna.platform.linux,com.sun.jna.platform.mac;v
+ ersion="[5.2,6)",com.sun.jna.platform.unix.solaris;version="[5.2,6)",
+ com.sun.jna.platform.win32;version="[5.2,6)",com.sun.jna.platform.win
+ 32.COM;version="[5.2,6)",com.sun.jna.ptr;version="[5.2,6)",org.slf4j;
+ version="[1.7,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-4.2.0.201903051501
+
