@@ -9,6 +9,7 @@ import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.GlobalMemory;
 import oshi.hardware.HardwareAbstractionLayer;
+import oshi.hardware.Sensors;
 import oshi.software.os.OperatingSystem;
 
 /**
@@ -17,30 +18,57 @@ import oshi.software.os.OperatingSystem;
  */
 public class ProgramaTest {
 
-    public static void main(String[] args) {
-        // instanciando objeto oshi do tipo Biblioteca
-        Bibliotecas oshiTeste = new Bibliotecas();
-        JSensorsLib jsensors = new JSensorsLib();
-        // instanciando objeto si do tipo SystemInfo da biblioteca oshi
-        SystemInfo si = new SystemInfo();
+	public static void main(String[] args) {
+		// instanciando objeto oshi do tipo Biblioteca
+		Bibliotecas oshiTeste = new Bibliotecas();
+		JSensorsLib jsensors = new JSensorsLib();
+		// instanciando objeto si do tipo SystemInfo da biblioteca oshi
 
-        HardwareAbstractionLayer hal = si.getHardware();
-        OperatingSystem os = si.getOperatingSystem();
-        CentralProcessor cp = hal.getProcessor();
-        GlobalMemory memory = hal.getMemory();
+		SystemInfo si = new SystemInfo();
 
-        oshiTeste.printProcesses(os, memory);
-        oshiTeste.printProcessor(cp);
-       // oshiTeste.printCpu(cp);
-        jsensors.testCpu();
-        jsensors.testeGpu();
-        jsensors.testeDisk();
-        jsensors.checkRights();
-        //jsensors.printPowerShell();
-        
-        
-        
-        
-        
-    }
+		HardwareAbstractionLayer hal = si.getHardware();
+		OperatingSystem os = si.getOperatingSystem();
+		CentralProcessor cp = hal.getProcessor();
+		GlobalMemory memory = hal.getMemory();
+		SensorsOshi sensorsOshi = new SensorsOshi();
+
+		sensorsOshi.sensors.getCpuTemperature();
+		sensorsOshi.sensors.getCpuVoltage();
+		sensorsOshi.sensors.getFanSpeeds();
+
+		// Sensors sensors = new Sensors() {
+//			
+//			@Override
+//			public int[] getFanSpeeds() {
+//				// TODO Auto-generated method stub
+//				return null;
+//			}
+//			
+//			@Override
+//			public double getCpuVoltage() {
+//				// TODO Auto-generated method stub
+//				return 0;
+//			}
+//			
+//			@Override
+//			public double getCpuTemperature() {
+//				double teste = hal.getSensors().getCpuTemperature();
+//				System.out.println(teste);
+//				// TODO Auto-generated method stub
+//				return teste;
+//			}
+//		};
+//		
+//		sensors.getCpuTemperature();
+
+		// oshiTeste.printProcesses(os, memory);
+		// oshiTeste.printProcessor(cp);
+		// oshiTeste.printCpu(cp);
+//		jsensors.testCpu();
+//		jsensors.testeGpu();
+//		jsensors.testeDisk();
+//		jsensors.checkRights();
+//		jsensors.printPowerShell();
+
+	}
 }

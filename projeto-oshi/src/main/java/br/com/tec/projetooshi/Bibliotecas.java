@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.GlobalMemory;
+import oshi.hardware.Sensors;
 import oshi.software.os.OSProcess;
 import oshi.software.os.OperatingSystem;
 import oshi.software.os.OperatingSystem.ProcessSort;
@@ -61,6 +62,8 @@ public class Bibliotecas {
         System.out.println(procCpu.toString());
 
     }
+    
+   
 }
 
 // int pro;
