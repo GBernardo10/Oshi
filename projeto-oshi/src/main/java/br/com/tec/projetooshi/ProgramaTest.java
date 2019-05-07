@@ -31,11 +31,25 @@ public class ProgramaTest {
 		CentralProcessor cp = hal.getProcessor();
 		GlobalMemory memory = hal.getMemory();
 		SensorsOshi sensorsOshi = new SensorsOshi();
+		ProcessosOshi processosOshi = new ProcessosOshi();
+		ComponenteHardware componenteHardware = new ComponenteHardware();
 
-		sensorsOshi.sensors.getCpuTemperature();
-		sensorsOshi.sensors.getCpuVoltage();
-		sensorsOshi.sensors.getFanSpeeds();
-
+		componenteHardware.getNomeCPU();
+		componenteHardware.getFamilyCPU();
+		componenteHardware.getIdentifierCPU();
+		componenteHardware.getLogicalProcessorCount();
+		componenteHardware.getPhysicalProcessorCount();
+		componenteHardware.getPhysicalPackageCount();
+		componenteHardware.getModel();
+		componenteHardware.getManufacturer();
+		componenteHardware.getMemoriaTotal();
+		componenteHardware.getMemoriaLivre();
+//		sensorsOshi.sensors.getCpuTemperature();
+//		sensorsOshi.sensors.getCpuVoltage();
+//		sensorsOshi.sensors.getFanSpeeds();
+//
+//		processosOshi.quantidadeProcessos();
+//		processosOshi.listProcessos(memory);
 		// Sensors sensors = new Sensors() {
 //			
 //			@Override
